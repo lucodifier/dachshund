@@ -1,0 +1,59 @@
+{
+  "name": "dashund",
+  "version": "1.0.0",
+  "description": "🐕 Framework React ultra-leve com SEO perfeito, sem SSR",
+  "main": "dist/dashund.cjs.js",
+  "module": "dist/dashund.esm.js",
+  "browser": "dist/dashund.umd.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "dashund": "./bin/dashund.js"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "react",
+    "seo",
+    "framework",
+    "static-site-generation",
+    "spa",
+    "prerender",
+    "lightweight",
+    "no-ssr"
+  ],
+  "author": "Your Name <email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/dashund.git"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-react": "^7.23.0",
+    "rollup": "^4.9.0"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "fast-glob": "^3.3.2",
+    "chokidar": "^3.5.3",
+    "chalk": "^5.3.0"
+  }
+}
