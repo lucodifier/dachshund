@@ -1,10 +1,10 @@
 function useNavigate() {
-  if (typeof window === 'undefined' || !window.__DASHUND__) {
-    return () => console.warn('🐕 Dashund not initialized');
+  if (typeof window === 'undefined' || !window.__DACHSHUND__) {
+    return () => console.warn('🐕 Dachshund not initialized');
   }
 
   return (path) => {
-    window.__DASHUND__.navigate(path);
+    window.__DACHSHUND__.navigate(path);
   };
 }
 

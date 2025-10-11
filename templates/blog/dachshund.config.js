@@ -1,7 +1,7 @@
 export default {
   global: {
-    siteName: 'Dashund Blog',
-    baseUrl: 'https://dashund-blog.com',
+    siteName: 'Dachshund Blog',
+    baseUrl: 'https://dachshund-blog.com',
     lang: 'pt-BR',
     favicon: '/favicon.ico',
     css: '/styles.css',
@@ -11,15 +11,15 @@ export default {
   routes: {
     '/': {
       seo: {
-        title: 'Home - Dashund Blog',
+        title: 'Home - Dachshund Blog',
         description: 'Blog sobre React, SEO e desenvolvimento web moderno',
-        keywords: 'react, seo, blog, dashund, framework',
+        keywords: 'react, seo, blog, dachshund, framework',
         image: '/og-home.jpg',
         structuredData: {
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Dashund Blog",
-          "url": "https://dashund-blog.com",
+          "name": "Dachshund Blog",
+          "url": "https://dachshund-blog.com",
           "description": "Blog sobre desenvolvimento web"
         }
       }
@@ -33,8 +33,8 @@ export default {
     },
     '/about': {
       seo: {
-        title: 'Sobre - Dashund Blog',
-        description: 'Conheça o Dashund Framework e nossa missão'
+        title: 'Sobre - Dachshund Blog',
+        description: 'Conheça o Dachshund Framework e nossa missão'
       }
     }
   },

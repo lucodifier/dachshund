@@ -1,14 +1,14 @@
 {
-  "name": "dashund-blog-example",
+  "name": "dachshund-blog-example",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && dashund build",
+    "build": "vite build && dachshund build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dashund/core": "^1.0.0",
+    "@dachshund/core": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

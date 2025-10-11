@@ -9,12 +9,12 @@ export default function About({ navigate }) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 mb-8">
-              Sobre o Dashund
+              Sobre o Dachshund
             </h1>
             
             <div className="bg-white rounded-xl shadow-lg p-12 mb-8">
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                O <span className="font-bold gradient-text">Dashund</span> nasceu da frustração com a complexidade 
+                O <span className="font-bold gradient-text">Dachshund</span> nasceu da frustração com a complexidade 
                 desnecessária do SSR. Por que você precisa de um servidor Node.js apenas para ter SEO?
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
@@ -49,7 +49,7 @@ export default function About({ navigate }) {
               <div className="p-12 text-center">
                 <h2 className="text-3xl font-bold mb-4">Open Source</h2>
                 <p className="text-lg opacity-90 mb-6">
-                  Dashund é 100% open source e gratuito. Contribua no GitHub!
+                  Dachshund é 100% open source e gratuito. Contribua no GitHub!
                 </p>
                 <button className="bg-white text-primary-500 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
                   Ver no GitHub →

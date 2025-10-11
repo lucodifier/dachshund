@@ -10,20 +10,20 @@ export default {
   external: ['react', 'react-dom'],
   output: [
     {
-      file: 'dist/dashund.cjs.js',
+      file: 'dist/dachshund.cjs.js',
       format: 'cjs',
       exports: 'named',
       sourcemap: true
     },
     {
-      file: 'dist/dashund.esm.js',
+      file: 'dist/dachshund.esm.js',
       format: 'esm',
       sourcemap: true
     },
     {
-      file: 'dist/dashund.umd.js',
+      file: 'dist/dachshund.umd.js',
       format: 'umd',
-      name: 'Dashund',
+      name: 'Dachshund',
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM'

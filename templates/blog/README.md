@@ -1,6 +1,6 @@
-# 🐕 Dashund Blog Template
+# 🐕 Dachshund Blog Template
 
-Aplicação blog completa usando Dashund Framework + Tailwind CSS
+Aplicação blog completa usando Dachshund Framework + Tailwind CSS
 
 ## 🚀 Como usar
 
@@ -39,7 +39,7 @@ Visualiza o build de produção localmente.
 │   ├── App.jsx        # Configuração de rotas
 │   └── index.js       # Entry point
 ├── public/            # Arquivos estáticos
-├── dashund.config.js  # Configuração SEO
+├── dachshund.config.js  # Configuração SEO
 └── tailwind.config.js # Configuração Tailwind
 ```
 
@@ -60,7 +60,7 @@ colors: {
 
 ### SEO
 
-Configure o SEO global em `dashund.config.js`
+Configure o SEO global em `dachshund.config.js`
 
 ### Rotas
 
@@ -68,7 +68,7 @@ Adicione novas rotas em `src/App.jsx`
 
 ## 📚 Documentação
 
-Visite [dashund.dev](https://dashund.dev) para documentação completa.
+Visite [dachshund.dev](https://dachshund.dev) para documentação completa.
 
 ## 📄 Licença
 

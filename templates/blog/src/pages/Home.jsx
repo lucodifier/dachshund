@@ -43,7 +43,7 @@ export default function Home({ navigate }) {
         <div className="container mx-auto px-4 text-center">
           <div className="text-6xl mb-6">🐕</div>
           <h1 className="text-6xl font-bold text-gray-900 mb-4">
-            Dashund Framework
+            Dachshund Framework
           </h1>
           <p className="text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
             O doguinho que corre atrás do <span className="gradient-text font-bold">SEO</span> que o React esqueceu
@@ -84,7 +84,7 @@ export default function Home({ navigate }) {
       {/* Features Grid */}
       <section className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-bold text-center mb-12">
-          Por que Dashund?
+          Por que Dachshund?
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, i) => (
@@ -110,7 +110,7 @@ export default function Home({ navigate }) {
               Instale agora e crie seu primeiro site em minutos
             </p>
             <div className="bg-black/20 rounded-lg p-6 max-w-md mx-auto">
-              <code className="text-lg">npm install dashund</code>
+              <code className="text-lg">npm install dachshund</code>
             </div>
           </div>
         </Card>

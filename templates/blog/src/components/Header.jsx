@@ -18,7 +18,7 @@ export default function Header({ navigate }) {
           >
             <div className="text-4xl">🐕</div>
             <div>
-              <div className="text-2xl font-bold gradient-text">Dashund</div>
+              <div className="text-2xl font-bold gradient-text">Dachshund</div>
               <div className="text-xs text-gray-500">Framework</div>
             </div>
           </button>

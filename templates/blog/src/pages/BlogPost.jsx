@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useSEO } from '@dashund/core';
+import { useParams, useSEO } from '@dachshund/core';
 import Layout from '../components/Layout';
 import { getPostById } from '../data/posts';
 
@@ -13,7 +13,7 @@ export default function BlogPost({ navigate }) {
   }
 
   useSEO({
-    title: `${post.title} | Dashund Blog`,
+    title: `${post.title} | Dachshund Blog`,
     description: post.excerpt,
     image: post.image,
     keywords: post.tags.join(', '),

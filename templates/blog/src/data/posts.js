@@ -1,16 +1,16 @@
 export const posts = [
   {
     id: 1,
-    slug: 'introducao-dashund',
-    title: 'Introdução ao Dashund Framework',
+    slug: 'introducao-dachshund',
+    title: 'Introdução ao Dachshund Framework',
     excerpt: 'Conheça o framework React mais leve e SEO-friendly do mercado',
     content: `
-# Introdução ao Dashund Framework
+# Introdução ao Dachshund Framework
 
-O Dashund é um framework revolucionário que combina a simplicidade do React 
+O Dachshund é um framework revolucionário que combina a simplicidade do React 
 com SEO perfeito, sem a complexidade do SSR.
 
-## Por que Dashund?
+## Por que Dachshund?
 
 - **Zero SSR**: Deploy em qualquer CDN
 - **5kb gzipped**: Ultra leve
@@ -18,14 +18,14 @@ com SEO perfeito, sem a complexidade do SSR.
 
 ## Como funciona?
 
-O Dashund usa Static Site Generation (SSG) inteligente...
+O Dachshund usa Static Site Generation (SSG) inteligente...
     `,
     author: 'João Silva',
     date: '2025-10-10',
     readTime: '5 min',
     category: 'Tutorial',
-    image: '/blog/dashund-intro.jpg',
-    tags: ['dashund', 'react', 'seo']
+    image: '/blog/dachshund-intro.jpg',
+    tags: ['dachshund', 'react', 'seo']
   },
   {
     id: 2,

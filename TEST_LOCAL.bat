@@ -1,9 +1,9 @@
 @echo off
-REM Script de teste local do Dashund Framework para Windows
+REM Script de teste local do Dachshund Framework para Windows
 REM Este script automatiza o processo de teste local
 
 echo.
-echo 🐕 Dashund - Script de Teste Local
+echo 🐕 Dachshund - Script de Teste Local
 echo ==================================
 echo.
 
@@ -39,7 +39,7 @@ echo.
 
 REM Passo 4: Test CLI
 echo [4/5] Testando comando CLI...
-call dashund --version
+call dachshund --version
 if errorlevel 1 (
     echo ⚠️  CLI nao esta disponivel globalmente
     exit /b 1
@@ -53,11 +53,11 @@ echo.
 echo ✅ Framework pronto para teste!
 echo.
 echo Para criar um projeto de teste:
-echo   dashund create meu-blog-teste
+echo   dachshund create meu-blog-teste
 echo.
-echo Dentro do projeto, linkar o Dashund local:
+echo Dentro do projeto, linkar o Dachshund local:
 echo   cd meu-blog-teste
-echo   npm link @dashund/core
+echo   npm link @dachshund/core
 echo.
 echo Iniciar desenvolvimento:
 echo   npm run dev

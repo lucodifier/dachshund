@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Script de teste local do Dashund Framework
+# Script de teste local do Dachshund Framework
 # Este script automatiza o processo de teste local
 
-echo "🐕 Dashund - Script de Teste Local"
+echo "🐕 Dachshund - Script de Teste Local"
 echo "=================================="
 echo ""
 
@@ -45,7 +45,7 @@ echo ""
 
 # Passo 4: Test CLI
 echo -e "${BLUE}[4/5] Testando comando CLI...${NC}"
-dashund --version
+dachshund --version
 if [ $? -ne 0 ]; then
     echo -e "${YELLOW}⚠️  CLI não está disponível globalmente${NC}"
     exit 1
@@ -59,11 +59,11 @@ echo ""
 echo -e "${GREEN}✅ Framework pronto para teste!${NC}"
 echo ""
 echo "Para criar um projeto de teste:"
-echo -e "${YELLOW}  dashund create meu-blog-teste${NC}"
+echo -e "${YELLOW}  dachshund create meu-blog-teste${NC}"
 echo ""
-echo "Dentro do projeto, linkar o Dashund local:"
+echo "Dentro do projeto, linkar o Dachshund local:"
 echo -e "${YELLOW}  cd meu-blog-teste${NC}"
-echo -e "${YELLOW}  npm link @dashund/core${NC}"
+echo -e "${YELLOW}  npm link @dachshund/core${NC}"
 echo ""
 echo "Iniciar desenvolvimento:"
 echo -e "${YELLOW}  npm run dev${NC}"

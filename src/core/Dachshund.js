@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Router from './Router';
 import SEOManager from './SEOManager';
 
-class Dashund {
+class Dachshund {
   constructor(config = {}) {
     this.router = new Router();
     this.seo = new SEOManager();
@@ -15,7 +15,7 @@ class Dashund {
     this.root = null;
     
     if (typeof window !== 'undefined') {
-      window.__DASHUND__ = this;
+      window.__DACHSHUND__ = this;
     }
   }
 
@@ -36,7 +36,7 @@ class Dashund {
   render() {
     const currentRoute = this.router.getCurrentRoute();
     if (!currentRoute) {
-      console.warn('🐕 Dashund: Route not found');
+      console.warn('🐕 Dachshund: Route not found');
       return;
     }
 
@@ -45,7 +45,7 @@ class Dashund {
 
     const container = document.getElementById('root');
     if (!container) {
-      console.error('🐕 Dashund: #root container not found');
+      console.error('🐕 Dachshund: #root container not found');
       return;
     }
 
@@ -80,7 +80,7 @@ class Dashund {
     this.router.setPath(window.location.pathname);
     this.render();
 
-    console.log('🐕 Dashund started!');
+    console.log('🐕 Dachshund started!');
   }
 
   // Alias para start() - compatibilidade
@@ -98,4 +98,4 @@ class Dashund {
   }
 }
 
-export default Dashund;
+export default Dachshund;

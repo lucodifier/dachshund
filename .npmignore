@@ -1,5 +1,31 @@
+# Source files
 src/
-tests/
-*.log
-.git*
+
+# Build configs
 rollup.config.js
+
+# Tests and scripts
+TEST_LOCAL.sh
+TEST_LOCAL.bat
+test/
+*.test.js
+
+# Git
+.git
+.gitignore
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# Misc
+node_modules/
+.env

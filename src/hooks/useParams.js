@@ -1,9 +1,9 @@
 function useParams() {
-  if (typeof window === 'undefined' || !window.__DASHUND__) {
+  if (typeof window === 'undefined' || !window.__DACHSHUND__) {
     return {};
   }
 
-  const currentRoute = window.__DASHUND__.router.getCurrentRoute();
+  const currentRoute = window.__DACHSHUND__.router.getCurrentRoute();
   return currentRoute?.params || {};
 }
 

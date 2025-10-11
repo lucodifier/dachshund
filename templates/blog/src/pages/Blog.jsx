@@ -1,12 +1,12 @@
 import React from 'react';
-import { useSEO } from '@dashund/core';
+import { useSEO } from '@dachshund/core';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
 import { posts } from '../data/posts';
 
 export default function Blog({ navigate }) {
   useSEO({
-    title: 'Blog - Últimos Artigos | Dashund',
+    title: 'Blog - Últimos Artigos | Dachshund',
     description: 'Artigos sobre React, SEO e desenvolvimento web moderno'
   });
 

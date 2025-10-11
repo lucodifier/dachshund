@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-3xl">🐕</span>
-              <span className="text-xl font-bold">Dashund</span>
+              <span className="text-xl font-bold">Dachshund</span>
             </div>
             <p className="text-gray-400 text-sm">
               O doguinho que corre atrás do SEO que o React esqueceu.
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>© 2025 Dashund Framework. MIT License.</p>
+          <p>© 2025 Dachshund Framework. MIT License.</p>
         </div>
       </div>
     </footer>

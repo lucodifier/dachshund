@@ -1,205 +1,76 @@
-# 🐕 Dashund
+# 🐕 Dachshund
 
-**O doguinho que corre atrás do SEO que o React esqueceu.**
+**The little dog that runs after the SEO that React forgot.**
 
-Framework React ultra-leve (~5kb) com SEO perfeito, sem necessidade de SSR (Server-Side Rendering).
+Ultra-lightweight React framework (~5kb) with perfect SEO, no SSR required.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/@dashund/core.svg)](https://www.npmjs.com/package/@dashund/core)
+[![npm version](https://badge.fury.io/js/@dachshund/core.svg)](https://www.npmjs.com/package/@dachshund/core)
+
+🌐 **[Documentation](https://lucodifier.github.io/dachshund-landing/)** | **[GitHub](https://github.com/lucodifier/dachshund)**
 
 ---
 
-## ✨ Por que Dashund?
+## ✨ Why Dachshund?
 
-Cansado da complexidade do Next.js só para ter SEO? O Dashund resolve isso de forma simples:
+Tired of Next.js complexity just to have SEO? Dachshund solves this simply:
 
-- ✅ **Zero SSR** - Sem servidor Node.js necessário
-- ✅ **SEO Perfeito** - Meta tags, Open Graph, Twitter Cards e JSON-LD automáticos
-- ✅ **Ultra Leve** - ~5kb gzipped (16x menor que Next.js)
-- ✅ **Static Generation** - HTML pré-renderizado para cada rota
-- ✅ **SPA Navigation** - Navegação instantânea sem reload
-- ✅ **Dynamic Routes** - Suporte completo a `/blog/:id` e parâmetros
-- ✅ **CLI Integrado** - Gerador de projetos como create-react-app
-- ✅ **Deploy Simples** - Funciona em qualquer CDN (Netlify, Vercel, Cloudflare Pages)
+- ✅ **Zero SSR** - No Node.js server required
+- ✅ **Perfect SEO** - Meta tags, Open Graph, Twitter Cards, and JSON-LD automatic
+- ✅ **Ultra Lightweight** - ~5kb gzipped (16x smaller than Next.js)
+- ✅ **Static Generation** - Pre-rendered HTML for each route
+- ✅ **SPA Navigation** - Instant navigation without reload
+- ✅ **Dynamic Routes** - Full support for `/blog/:id` and parameters
+- ✅ **Built-in CLI** - Project generator like create-react-app
+- ✅ **Simple Deploy** - Works on any CDN (Netlify, Vercel, Cloudflare Pages)
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
-### Criar Novo Projeto (Recomendado)
+### Create New Project (Recommended)
 
 ```bash
-npx dashund create meu-projeto
-cd meu-projeto
+npx dachshund create my-project
+cd my-project
 npm run dev
 ```
 
-### Instalação Manual
+### Manual Installation
 
 ```bash
-npm install @dashund/core react react-dom
+npm install @dachshund/core react react-dom
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### Usando o CLI
-
-```bash
-# Criar projeto
-dashund create meu-blog
-
-# Entrar no diretório
-cd meu-blog
-
-# Iniciar desenvolvimento
-npm run dev
-
-# Build para produção
-npm run build
-```
-
-### Uso Programático
-
 ```jsx
-import Dashund from '@dashund/core';
+import Dachshund from '@dachshund/core';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
 
-const app = new Dashund({
-  baseUrl: 'https://meusite.com',
+const app = new Dachshund({
+  baseUrl: 'https://mysite.com',
   scrollToTop: true
 });
 
-// Rotas estáticas
+// Static routes
 app.route('/', Home, {
-  title: 'Home - Meu Site',
-  description: 'Site incrível com SEO perfeito',
+  title: 'Home - My Site',
+  description: 'Amazing site with perfect SEO',
   keywords: 'react, seo, framework'
 });
 
-// Rotas dinâmicas
-app.route('/blog/:id', BlogPost, {
+// Dynamic routes
+app.route('/blog/:id', Blog, {
   title: 'Blog Post',
-  description: 'Leia nossos artigos'
+  description: 'Read our articles'
 });
 
-// Inicializar app
+// Initialize app
 app.init('root');
-```
-
----
-
-## 📁 Templates Disponíveis
-
-### Blog Template (Padrão)
-
-Blog completo com Tailwind CSS, páginas pré-configuradas e SEO otimizado.
-
-```bash
-dashund create meu-blog --template blog
-```
-
-**Inclui:**
-- ✅ Home Page com hero e features
-- ✅ Blog Listing com cards
-- ✅ Blog Post com rotas dinâmicas (`/blog/:id`)
-- ✅ About Page
-- ✅ Tailwind CSS configurado
-- ✅ Componentes reutilizáveis (Header, Footer, Layout, Card)
-- ✅ SEO completo e automático
-
-**Estrutura do Projeto:**
-```
-meu-blog/
-├── src/
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Blog.jsx
-│   │   ├── BlogPost.jsx
-│   │   └── About.jsx
-│   ├── components/
-│   │   ├── Layout.jsx
-│   │   ├── Header.jsx
-│   │   ├── Footer.jsx
-│   │   └── Card.jsx
-│   ├── data/
-│   │   └── posts.js
-│   ├── App.jsx
-│   └── index.js
-├── public/
-│   └── styles.css
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── dashund.config.js
-```
-
----
-
-## 🛠️ API
-
-### Dashund Class
-
-```javascript
-const app = new Dashund(config);
-```
-
-**Config Options:**
-```javascript
-{
-  baseUrl: 'https://meusite.com',  // URL base do site
-  scrollToTop: true                 // Scroll to top na navegação
-}
-```
-
-### Métodos
-
-#### `app.route(path, Component, seoMeta)`
-
-Define uma rota na aplicação.
-
-```javascript
-app.route('/sobre', About, {
-  title: 'Sobre - Meu Site',
-  description: 'Saiba mais sobre nós',
-  keywords: 'sobre, empresa, missão',
-  image: '/og-about.jpg',
-  structuredData: {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Minha Empresa"
-  }
-});
-```
-
-**Rotas Dinâmicas:**
-```javascript
-app.route('/blog/:id', BlogPost, {
-  title: 'Blog Post',
-  description: 'Leia nossos artigos'
-});
-
-app.route('/produtos/:categoria/:id', Product);
-```
-
-#### `app.init(rootId)`
-
-Inicializa a aplicação.
-
-```javascript
-app.init('root'); // Monta no elemento #root
-```
-
-#### `app.navigate(path)`
-
-Navegação programática.
-
-```javascript
-app.navigate('/blog/1');
 ```
 
 ---
@@ -208,16 +79,16 @@ app.navigate('/blog/1');
 
 ### `useSEO(seoMeta)`
 
-Atualiza meta tags dinamicamente.
+Update meta tags dynamically.
 
 ```jsx
-import { useSEO } from '@dashund/core';
+import { useSEO } from '@dachshund/core';
 
 function BlogPost({ params }) {
   const post = getPostById(params.id);
   
   useSEO({
-    title: `${post.title} | Meu Blog`,
+    title: `${post.title} | My Blog`,
     description: post.excerpt,
     image: post.image,
     keywords: post.tags.join(', '),
@@ -225,8 +96,7 @@ function BlogPost({ params }) {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": post.title,
-      "author": post.author,
-      "datePublished": post.date
+      "author": post.author
     }
   });
 
@@ -236,10 +106,10 @@ function BlogPost({ params }) {
 
 ### `useParams()`
 
-Acessa parâmetros da rota.
+Access route parameters.
 
 ```jsx
-import { useParams } from '@dashund/core';
+import { useParams } from '@dachshund/core';
 
 function BlogPost() {
   const { id } = useParams(); // /blog/:id
@@ -249,17 +119,17 @@ function BlogPost() {
 
 ### `useNavigate()`
 
-Hook para navegação.
+Programmatic navigation.
 
 ```jsx
-import { useNavigate } from '@dashund/core';
+import { useNavigate } from '@dachshund/core';
 
 function Header() {
   const navigate = useNavigate();
   
   return (
     <button onClick={() => navigate('/blog')}>
-      Ver Blog
+      View Blog
     </button>
   );
 }
@@ -267,120 +137,35 @@ function Header() {
 
 ---
 
-## ⚙️ Configuração SEO
-
-### `dashund.config.js`
-
-```javascript
-module.exports = {
-  global: {
-    siteName: 'Meu Site',
-    baseUrl: 'https://meusite.com',
-    lang: 'pt-BR',
-    favicon: '/favicon.ico',
-    css: '/styles.css',
-    bundle: '/bundle.js',
-    defaultImage: '/og-default.jpg'
-  },
-  routes: {
-    '/': {
-      seo: {
-        title: 'Home - Meu Site',
-        description: 'Site incrível com SEO perfeito',
-        keywords: 'react, seo, framework',
-        image: '/og-home.jpg',
-        structuredData: {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Meu Site",
-          "url": "https://meusite.com"
-        }
-      }
-    },
-    '/blog': {
-      seo: {
-        title: 'Blog - Todos os Artigos',
-        description: 'Artigos sobre tecnologia',
-        keywords: 'blog, artigos, tecnologia'
-      }
-    }
-  },
-  publicDir: 'public'
-};
-```
-
----
-
-## 🎨 Integração com Tailwind CSS
-
-O template vem com Tailwind CSS pré-configurado:
-
-**`tailwind.config.js`:**
-```javascript
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          500: '#667eea',
-          600: '#5568d3',
-        }
-      }
-    },
-  },
-  plugins: [],
-}
-```
-
-**`public/styles.css`:**
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-  .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 
-           text-white font-semibold py-3 px-8 rounded-lg;
-  }
-}
-```
-
----
-
-## 🏗️ Build de Produção
+## 🏗️ Production Build
 
 ```bash
 npm run build
 ```
 
-**O que é gerado:**
+**What's generated:**
 
 ```
 dist/
-├── index.html              # Home com meta tags completas
+├── index.html              # Home with complete meta tags
 ├── blog/
 │   ├── index.html          # Blog listing
-│   ├── 1/index.html        # Post 1 com SEO específico
-│   ├── 2/index.html        # Post 2 com SEO específico
-│   └── 3/index.html        # Post 3 com SEO específico
+│   ├── 1/index.html        # Post 1 with specific SEO
+│   ├── 2/index.html        # Post 2 with specific SEO
+│   └── 3/index.html        # Post 3 with specific SEO
 ├── about/index.html        # About page
 └── assets/
-    ├── bundle.js           # JavaScript otimizado
-    └── styles.css          # CSS otimizado
+    ├── bundle.js           # Optimized JavaScript
+    └── styles.css          # Optimized CSS
 ```
 
-**Cada HTML inclui:**
+**Each HTML includes:**
 - ✅ Meta tags (`<title>`, `<meta name="description">`)
 - ✅ Open Graph tags (`og:title`, `og:description`, `og:image`)
 - ✅ Twitter Cards (`twitter:card`, `twitter:title`)
 - ✅ JSON-LD structured data
 - ✅ Canonical URLs
-- ✅ Assets otimizados
+- ✅ Optimized assets
 
 ---
 
@@ -390,219 +175,66 @@ dist/
 
 ```bash
 npm run build
-# Deploy a pasta dist/
-```
-
-**netlify.toml:**
-```toml
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Deploy dist/ folder
 ```
 
 ### Vercel
 
 ```bash
 npm run build
-# Deploy a pasta dist/
-```
-
-**vercel.json:**
-```json
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
-}
+vercel --prod
 ```
 
 ### Cloudflare Pages
 
 ```bash
 npm run build
-# Deploy a pasta dist/
-```
-
-**Configurações:**
-- Build command: `npm run build`
-- Output directory: `dist`
-
----
-
-## 🧪 Desenvolvimento Local
-
-### Testar o Framework Localmente
-
-```bash
-# No diretório do framework
-npm install
-npm run build
-npm link
-
-# Criar projeto de teste
-dashund create teste-local
-cd teste-local
-npm link dashund
-npm run dev
-```
-
-### Scripts Disponíveis
-
-**No framework:**
-```bash
-npm run build      # Build do framework
-npm run dev        # Watch mode (Rollup)
-npm test           # Executar testes
-```
-
-**No projeto gerado:**
-```bash
-npm run dev        # Servidor de desenvolvimento (Vite)
-npm run build      # Build de produção
-npm run preview    # Preview do build
+# Deploy dist/ folder
 ```
 
 ---
 
-## 📊 Comparação
+## 📊 Comparison
 
-| Feature | Dashund | Next.js | Create React App |
+| Feature | Dachshund | Next.js | Create React App |
 |---------|---------|---------|------------------|
-| **Tamanho** | ~5kb | ~80kb | ~45kb |
+| **Size** | ~5kb | ~80kb | ~45kb |
 | **SSR** | ❌ (SSG) | ✅ | ❌ |
-| **SEO** | ✅ Automático | ✅ | ❌ |
-| **Servidor** | ❌ | ✅ Necessário | ❌ |
-| **Deploy** | Qualquer CDN | Vercel/Node | Qualquer CDN |
-| **Complexidade** | 🟢 Baixa | 🟡 Média | 🟢 Baixa |
-| **Learning Curve** | 🟢 Suave | 🟡 Íngreme | 🟢 Suave |
+| **SEO** | ✅ Automatic | ✅ | ❌ |
+| **Server** | ❌ | ✅ Required | ❌ |
+| **Deploy** | Any CDN | Vercel/Node | Any CDN |
+| **Complexity** | 🟢 Low | 🟡 Medium | 🟢 Low |
+| **Learning Curve** | 🟢 Easy | 🟡 Steep | 🟢 Easy |
 
 ---
 
-## 🛠️ Comandos CLI
+## 📚 Full Documentation
 
-```bash
-# Criar novo projeto
-dashund create <nome-projeto> [--template <template>]
-
-# Build com SEO
-dashund build [--config dashund.config.js] [--output dist]
-
-# Ver versão
-dashund --version
-
-# Ajuda
-dashund --help
-```
-
----
-
-## 📚 Exemplos
-
-### Blog Completo
-
-```jsx
-// src/App.jsx
-import Dashund from '@dashund/core';
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-
-const app = new Dashund({
-  baseUrl: 'https://meublog.com'
-});
-
-app.route('/', Home, {
-  title: 'Home - Meu Blog',
-  description: 'Blog sobre tecnologia'
-});
-
-app.route('/blog', Blog);
-app.route('/blog/:id', BlogPost);
-
-export default app;
-```
-
-```jsx
-// src/pages/BlogPost.jsx
-import { useParams, useSEO } from '@dashund/core';
-import { getPostById } from '../data/posts';
-
-export default function BlogPost() {
-  const { id } = useParams();
-  const post = getPostById(id);
-
-  useSEO({
-    title: `${post.title} | Meu Blog`,
-    description: post.excerpt,
-    image: post.image
-  });
-
-  return (
-    <article>
-      <h1>{post.title}</h1>
-      <div>{post.content}</div>
-    </article>
-  );
-}
-```
+Visit **[dachshund.dev](https://lucodifier.github.io/dachshund-landing/)** for complete documentation.
 
 ---
 
 ## 🤝 Contributing
 
-Contribuições são bem-vindas! Por favor, leia nosso [guia de contribuição](CONTRIBUTING.md) antes de enviar PRs.
-
-### Desenvolvimento
-
-```bash
-# Clone o repositório
-git clone https://github.com/yourusername/dashund.git
-cd dashund
-
-# Instalar dependências
-npm install
-
-# Build
-npm run build
-
-# Testar localmente
-npm link
-dashund create teste
-cd teste
-npm link @dashund/core
-npm run dev
-```
+Contributions are welcome! Please read our [Contributing Guide](https://github.com/lucodifier/dachshund/blob/main/CONTRIBUTING.md).
 
 ---
 
-## 📄 Licença
+## 📄 License
 
-MIT © 2025
-
----
-
-## 🙏 Agradecimentos
-
-Inspirado pela necessidade de uma solução simples para SEO no React, sem a complexidade do SSR.
+MIT © 2025 Lucodifier
 
 ---
 
-## 📞 Suporte
+## 🙏 Support
 
-- 📖 **Documentação:** [dashund.dev](https://dashund.dev)
-- 🐛 **Issues:** [GitHub Issues](https://github.com/yourusername/dashund/issues)
-- 💬 **Discussões:** [GitHub Discussions](https://github.com/yourusername/dashund/discussions)
+- 📖 **Documentation:** [dachshund.dev](https://lucodifier.github.io/dachshund-landing/)
+- 🐛 **Issues:** [GitHub Issues](https://github.com/lucodifier/dachshund/issues)
+- 💬 **Discussions:** [GitHub Discussions](https://github.com/lucodifier/dachshund/discussions)
 
 ---
 
-**Feito com ❤️ e 🐕**
+**Made with ❤️ and 🐕**
 
-*"O doguinho que corre atrás do SEO que o React esqueceu."*
+*"The little dog that runs after the SEO that React forgot."*
+

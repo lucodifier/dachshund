@@ -1,13 +1,13 @@
 {
-  "name": "@dashund/core",
+  "name": "@dachshund/core",
   "version": "1.0.0",
   "description": "🐕 Framework React ultra-leve com SEO perfeito, sem SSR",
-  "main": "dist/dashund.cjs.js",
-  "module": "dist/dashund.esm.js",
-  "browser": "dist/dashund.umd.js",
+  "main": "dist/dachshund.cjs.js",
+  "module": "dist/dachshund.esm.js",
+  "browser": "dist/dachshund.umd.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "dashund": "./bin/dashund.js"
+    "dachshund": "./bin/dachshund.js"
   },
   "scripts": {
     "build": "rollup -c",
@@ -34,30 +34,34 @@
     "lightweight",
     "no-ssr"
   ],
-  "author": "Your Name <email@example.com>",
+  "author": "Lucodifier",
   "license": "MIT",
+  "homepage": "https://lucodifier.github.io/dachshund-landing/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/dashund.git"
+    "url": "https://github.com/lucodifier/dachshund.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucodifier/dachshund/issues"
   },
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-terser": "^0.4.4",
     "@babel/core": "^7.23.0",
     "@babel/preset-react": "^7.23.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.9.0"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.3",
     "commander": "^11.1.0",
     "fast-glob": "^3.3.2",
-    "chokidar": "^3.5.3",
-    "chalk": "^4.1.2",
     "fs-extra": "^11.2.0"
   }
 }

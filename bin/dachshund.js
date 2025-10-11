@@ -9,19 +9,19 @@ const { execSync } = require('child_process');
 const program = new Command();
 
 program
-  .name('dashund')
-  .description('🐕 Dashund Framework CLI')
+  .name('dachshund')
+  .description('🐕 Dachshund Framework CLI')
   .version('1.0.0');
 
 // Create new project command
 program
   .command('create <project-name>')
-  .description('Create a new Dashund project')
+  .description('Create a new Dachshund project')
   .option('-t, --template <template>', 'Template to use (blog, basic)', 'blog')
   .action((projectName, options) => {
     const projectPath = path.join(process.cwd(), projectName);
     
-    console.log(chalk.blue(`\n🐕 Creating Dashund project: ${projectName}...\n`));
+    console.log(chalk.blue(`\n🐕 Creating Dachshund project: ${projectName}...\n`));
     
     // Check if directory exists
     if (fs.existsSync(projectPath)) {
@@ -59,7 +59,7 @@ program
       console.log(chalk.cyan('\n📦 Install dependencies:'));
       console.log(chalk.white(`   npm install`));
       console.log(chalk.cyan('\n🔗 For local development (testing framework locally):'));
-      console.log(chalk.white(`   npm link @dashund/core`));
+      console.log(chalk.white(`   npm link @dachshund/core`));
       console.log(chalk.cyan('\n🚀 Start development:'));
       console.log(chalk.white(`   npm run dev`));
       console.log(chalk.cyan('\n📦 Build for production:'));
@@ -74,11 +74,11 @@ program
 program
   .command('build')
   .description('Build static site with SEO')
-  .option('-c, --config <file>', 'Config file', 'dashund.config.js')
+  .option('-c, --config <file>', 'Config file', 'dachshund.config.js')
   .option('-o, --output <dir>', 'Output directory', 'dist')
   .action(async (options) => {
     try {
-      console.log(chalk.blue('\n🐕 Dashund: Generating static HTML with SEO...\n'));
+      console.log(chalk.blue('\n🐕 Dachshund: Generating static HTML with SEO...\n'));
       
       const configPath = path.join(process.cwd(), options.config);
       
@@ -146,7 +146,7 @@ async function generateRouteHTML(routePath, routeConfig, distDir) {
 
 function injectSEOTags(html, seo) {
   const {
-    title = 'Dashund App',
+    title = 'Dachshund App',
     description = '',
     keywords = '',
     image = '',
@@ -191,3 +191,4 @@ ${JSON.stringify(structuredData, null, 2)}
 }
 
 program.parse();
+

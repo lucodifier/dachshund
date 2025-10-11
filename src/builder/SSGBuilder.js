@@ -11,7 +11,7 @@ class SSGBuilder {
   }
 
   async build(routes) {
-    console.log('🐕 Dashund: Generating static HTML with SEO...');
+    console.log('🐕 Dachshund: Generating static HTML with SEO...');
 
     for (const [routePath, routeData] of Object.entries(routes)) {
       await this.generateHTML(routePath, routeData);
@@ -42,7 +42,7 @@ class SSGBuilder {
 
   injectSEO(html, seo = {}) {
     const {
-      title = 'Dashund App',
+      title = 'Dachshund App',
       description = '',
       keywords = '',
       image = '',
