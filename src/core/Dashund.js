@@ -83,6 +83,11 @@ class Dashund {
     console.log('🐕 Dashund started!');
   }
 
+  // Alias para start() - compatibilidade
+  init(rootId = 'root') {
+    this.start();
+  }
+
   shouldInterceptLink(link) {
     return (
       link.href &&
