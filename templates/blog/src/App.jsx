@@ -1,4 +1,4 @@
-import Dachshund from '@dachshund/core';
+import Dachshund from '@dachshund_framework/core';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';

@@ -5,7 +5,7 @@
 Ultra-lightweight React framework (~5kb) with perfect SEO, no SSR required.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/@dachshund/core.svg)](https://www.npmjs.com/package/@dachshund/core)
+[![npm version](https://badge.fury.io/js/@dachshund_framework/core.svg)](https://www.npmjs.com/package/@dachshund_framework/core)
 
 🌐 **[Documentation](https://lucodifier.github.io/dachshund-landing/)** | **[GitHub](https://github.com/lucodifier/dachshund)**
 
@@ -31,15 +31,16 @@ Tired of Next.js complexity just to have SEO? Dachshund solves this simply:
 ### Create New Project (Recommended)
 
 ```bash
-npx dachshund create my-project
+npx create-dachshund my-project
 cd my-project
+npm install
 npm run dev
 ```
 
 ### Manual Installation
 
 ```bash
-npm install @dachshund/core react react-dom
+npm install @dachshund_framework/core react react-dom
 ```
 
 ---
@@ -47,7 +48,7 @@ npm install @dachshund/core react react-dom
 ## 🚀 Quick Start
 
 ```jsx
-import Dachshund from '@dachshund/core';
+import Dachshund from '@dachshund_framework/core';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 
@@ -82,7 +83,7 @@ app.init('root');
 Update meta tags dynamically.
 
 ```jsx
-import { useSEO } from '@dachshund/core';
+import { useSEO } from '@dachshund_framework/core';
 
 function BlogPost({ params }) {
   const post = getPostById(params.id);
@@ -109,7 +110,7 @@ function BlogPost({ params }) {
 Access route parameters.
 
 ```jsx
-import { useParams } from '@dachshund/core';
+import { useParams } from '@dachshund_framework/core';
 
 function BlogPost() {
   const { id } = useParams(); // /blog/:id
@@ -122,7 +123,7 @@ function BlogPost() {
 Programmatic navigation.
 
 ```jsx
-import { useNavigate } from '@dachshund/core';
+import { useNavigate } from '@dachshund_framework/core';
 
 function Header() {
   const navigate = useNavigate();

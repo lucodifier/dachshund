@@ -5,13 +5,14 @@ const chalk = require('chalk');
 const fs = require('fs-extra');
 const path = require('path');
 const { execSync } = require('child_process');
+const pkg = require('../package.json');
 
 const program = new Command();
 
 program
   .name('dachshund')
   .description('🐕 Dachshund Framework CLI')
-  .version('1.0.0');
+  .version(pkg.version);
 
 // Create new project command
 program
@@ -59,7 +60,7 @@ program
       console.log(chalk.cyan('\n📦 Install dependencies:'));
       console.log(chalk.white(`   npm install`));
       console.log(chalk.cyan('\n🔗 For local development (testing framework locally):'));
-      console.log(chalk.white(`   npm link @dachshund/core`));
+      console.log(chalk.white(`   npm link @dachshund_framework/core`));
       console.log(chalk.cyan('\n🚀 Start development:'));
       console.log(chalk.white(`   npm run dev`));
       console.log(chalk.cyan('\n📦 Build for production:'));

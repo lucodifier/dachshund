@@ -53,11 +53,11 @@ echo.
 echo ✅ Framework pronto para teste!
 echo.
 echo Para criar um projeto de teste:
-echo   dachshund create meu-blog-teste
+echo   npx create-dachshund meu-blog-teste
 echo.
 echo Dentro do projeto, linkar o Dachshund local:
 echo   cd meu-blog-teste
-echo   npm link @dachshund/core
+echo   npm link @dachshund_framework/core
 echo.
 echo Iniciar desenvolvimento:
 echo   npm run dev

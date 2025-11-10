@@ -1,6 +1,6 @@
 {
-  "name": "@dachshund/core",
-  "version": "1.0.0",
+  "name": "@dachshund_framework/core",
+  "version": "1.1.0",
   "description": "🐕 Framework React ultra-leve com SEO perfeito, sem SSR",
   "main": "dist/dachshund.cjs.js",
   "module": "dist/dachshund.esm.js",

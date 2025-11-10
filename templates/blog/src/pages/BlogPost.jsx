@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useSEO } from '@dachshund/core';
+import { useParams, useSEO } from '@dachshund_framework/core';
 import Layout from '../components/Layout';
 import { getPostById } from '../data/posts';
 

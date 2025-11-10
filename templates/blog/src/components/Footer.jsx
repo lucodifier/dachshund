@@ -20,9 +20,9 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Produto</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><a href="/" className="hover:text-white transition-colors">Documentação</a></li>
-              <li><a href="/" className="hover:text-white transition-colors">GitHub</a></li>
-              <li><a href="/" className="hover:text-white transition-colors">NPM</a></li>
+              <li><a href="https://github.com/lucodifier/dachshund" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Documentação</a></li>
+              <li><a href="https://github.com/lucodifier/dachshund" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
+              <li><a href="https://www.npmjs.com/package/@dachshund_framework/core" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">NPM</a></li>
             </ul>
           </div>
           
@@ -38,11 +38,9 @@ export default function Footer() {
           
           {/* Social */}
           <div>
-            <h3 className="font-bold mb-4">Social</h3>
+            <h3 className="font-bold mb-4">Contato</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-2xl hover:text-primary-500 transition-colors">💬</a>
-              <a href="#" className="text-2xl hover:text-primary-500 transition-colors">🐦</a>
-              <a href="#" className="text-2xl hover:text-primary-500 transition-colors">📧</a>
+              <a href="mailto:lucodifier@gmail.com" className="text-2xl hover:text-primary-500 transition-colors" title="Enviar email">📧</a>
             </div>
           </div>
         </div>

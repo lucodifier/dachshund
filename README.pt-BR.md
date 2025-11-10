@@ -5,7 +5,7 @@
 Framework React ultra-leve (~5kb) com SEO perfeito, sem necessidade de SSR (Server-Side Rendering).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/@dachshund/core.svg)](https://www.npmjs.com/package/@dachshund/core)
+[![npm version](https://badge.fury.io/js/@dachshund_framework/core.svg)](https://www.npmjs.com/package/@dachshund_framework/core)
 
 ---
 
@@ -29,15 +29,16 @@ Cansado da complexidade do Next.js só para ter SEO? O Dachshund resolve isso de
 ### Criar Novo Projeto (Recomendado)
 
 ```bash
-npx dachshund create meu-projeto
+npx create-dachshund meu-projeto
 cd meu-projeto
+npm install
 npm run dev
 ```
 
 ### Instalação Manual
 
 ```bash
-npm install @dachshund/core react react-dom
+npm install @dachshund_framework/core react react-dom
 ```
 
 ---
@@ -48,7 +49,7 @@ npm install @dachshund/core react react-dom
 
 ```bash
 # Criar projeto
-dachshund create meu-blog
+npx create-dachshund meu-blog
 
 # Entrar no diretório
 cd meu-blog
@@ -63,7 +64,7 @@ npm run build
 ### Uso Programático
 
 ```jsx
-import Dachshund from '@dachshund/core';
+import Dachshund from '@dachshund_framework/core';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -211,7 +212,7 @@ app.navigate('/blog/1');
 Atualiza meta tags dinamicamente.
 
 ```jsx
-import { useSEO } from '@dachshund/core';
+import { useSEO } from '@dachshund_framework/core';
 
 function BlogPost({ params }) {
   const post = getPostById(params.id);
@@ -239,7 +240,7 @@ function BlogPost({ params }) {
 Acessa parâmetros da rota.
 
 ```jsx
-import { useParams } from '@dachshund/core';
+import { useParams } from '@dachshund_framework/core';
 
 function BlogPost() {
   const { id } = useParams(); // /blog/:id
@@ -252,7 +253,7 @@ function BlogPost() {
 Hook para navegação.
 
 ```jsx
-import { useNavigate } from '@dachshund/core';
+import { useNavigate } from '@dachshund_framework/core';
 
 function Header() {
   const navigate = useNavigate();
@@ -510,7 +511,7 @@ dachshund --help
 
 ```jsx
 // src/App.jsx
-import Dachshund from '@dachshund/core';
+import Dachshund from '@dachshund_framework/core';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -532,7 +533,7 @@ export default app;
 
 ```jsx
 // src/pages/BlogPost.jsx
-import { useParams, useSEO } from '@dachshund/core';
+import { useParams, useSEO } from '@dachshund_framework/core';
 import { getPostById } from '../data/posts';
 
 export default function BlogPost() {
@@ -577,7 +578,7 @@ npm run build
 npm link
 dachshund create teste
 cd teste
-npm link @dachshund/core
+npm link @dachshund_framework/core
 npm run dev
 ```
 

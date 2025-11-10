@@ -1,0 +1,39 @@
+{
+  "name": "create-dachshund",
+  "version": "1.1.1",
+  "description": "🐕 Create Dachshund apps with one command",
+  "main": "index.js",
+  "bin": {
+    "create-dachshund": "./bin/create-dachshund.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "create-dachshund",
+    "dachshund",
+    "react",
+    "seo",
+    "framework",
+    "cli",
+    "generator"
+  ],
+  "author": "Lucodifier",
+  "license": "MIT",
+  "homepage": "https://github.com/lucodifier/dachshund",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucodifier/dachshund.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucodifier/dachshund/issues"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@dachshund_framework/core": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+

@@ -68,7 +68,7 @@ Adicione novas rotas em `src/App.jsx`
 
 ## 📚 Documentação
 
-Visite [dachshund.dev](https://dachshund.dev) para documentação completa.
+Visite [https://github.com/lucodifier/dachshund](https://https://github.com/lucodifier/dachshund) para documentação completa.
 
 ## 📄 Licença
 

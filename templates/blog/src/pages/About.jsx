@@ -51,9 +51,14 @@ export default function About({ navigate }) {
                 <p className="text-lg opacity-90 mb-6">
                   Dachshund é 100% open source e gratuito. Contribua no GitHub!
                 </p>
-                <button className="bg-white text-primary-500 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+                <a 
+                  href="https://github.com/lucodifier/dachshund" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-primary-500 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+                >
                   Ver no GitHub →
-                </button>
+                </a>
               </div>
             </Card>
           </div>

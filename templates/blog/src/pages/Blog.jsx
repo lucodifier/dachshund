@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSEO } from '@dachshund/core';
+import { useSEO } from '@dachshund_framework/core';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
 import { posts } from '../data/posts';
