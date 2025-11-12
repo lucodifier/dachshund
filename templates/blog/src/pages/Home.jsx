@@ -110,7 +110,7 @@ export default function Home({ navigate }) {
               Instale agora e crie seu primeiro site em minutos
             </p>
             <div className="bg-black/20 rounded-lg p-6 max-w-md mx-auto">
-              <code className="text-lg">npm install dachshund</code>
+              <code className="text-lg">npm install @dachshund_framework/core</code>
             </div>
           </div>
         </Card>

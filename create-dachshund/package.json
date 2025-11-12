@@ -1,6 +1,6 @@
 {
   "name": "create-dachshund",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "🐕 Create Dachshund apps with one command",
   "main": "index.js",
   "bin": {
@@ -28,9 +28,8 @@
   "bugs": {
     "url": "https://github.com/lucodifier/dachshund/issues"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "@dachshund_framework/core": "^1.1.0"
+  "dependencies": {
+    "@dachshund_framework/core": "^1.1.4"
   },
   "engines": {
     "node": ">=14.0.0"

@@ -30,6 +30,9 @@ Cansado da complexidade do Next.js só para ter SEO? O Dachshund resolve isso de
 
 ```bash
 npx create-dachshund meu-projeto
+# ou com o alias curto
+npx dachshund_framework create meu-projeto
+
 cd meu-projeto
 npm install
 npm run dev
@@ -50,6 +53,8 @@ npm install @dachshund_framework/core react react-dom
 ```bash
 # Criar projeto
 npx create-dachshund meu-blog
+# ou
+npx dachshund_framework create meu-blog
 
 # Entrar no diretório
 cd meu-blog

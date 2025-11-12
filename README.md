@@ -32,6 +32,9 @@ Tired of Next.js complexity just to have SEO? Dachshund solves this simply:
 
 ```bash
 npx create-dachshund my-project
+# ou com o novo alias curta
+npx dachshund_framework create my-project
+
 cd my-project
 npm install
 npm run dev

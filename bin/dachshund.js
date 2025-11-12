@@ -59,8 +59,6 @@ program
       console.log(chalk.white(`   cd ${projectName}`));
       console.log(chalk.cyan('\n📦 Install dependencies:'));
       console.log(chalk.white(`   npm install`));
-      console.log(chalk.cyan('\n🔗 For local development (testing framework locally):'));
-      console.log(chalk.white(`   npm link @dachshund_framework/core`));
       console.log(chalk.cyan('\n🚀 Start development:'));
       console.log(chalk.white(`   npm run dev`));
       console.log(chalk.cyan('\n📦 Build for production:'));

@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/lucodifier/dachshund/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📚 Documentation
+    url: https://lucodifier.github.io/dachshund-landing/
+    about: Read the official documentation
+  - name: 💡 Discord Community
+    url: https://discord.gg/dachshund
+    about: Join our Discord server for real-time help (coming soon)
+
