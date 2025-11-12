@@ -220,7 +220,7 @@ Visit **[dachshund.dev](https://lucodifier.github.io/dachshund-landing/)** for c
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our [Contributing Guide](https://github.com/lucodifier/dachshund/blob/main/CONTRIBUTING.md).
+Contributions are welcome! Please read our [Contributing Guide](https://github.com/lucodifier/dachshund/blob/master/CONTRIBUTING.md).
 
 ---
 
