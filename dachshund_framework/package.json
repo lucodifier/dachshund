@@ -1,0 +1,21 @@
+{
+  "name": "dachshund_framework",
+  "version": "1.0.1",
+  "description": "🐕 Simple CLI alias that forwards to @dachshund_framework/core",
+  "bin": {
+    "dachshund_framework": "./bin/dachshund_framework.js"
+  },
+  "keywords": [
+    "dachshund",
+    "cli",
+    "react",
+    "seo",
+    "framework"
+  ],
+  "author": "Lucodifier",
+  "license": "MIT",
+  "dependencies": {
+    "@dachshund_framework/core": "^1.1.4"
+  }
+}
+
