@@ -18,12 +18,12 @@ class Router {
   pathToRegex(path) {
     const regexPath = path
       .replace(/\//g, '\\/')
-      .replace(/:(w+)/g, '([^/]+)');
+      .replace(/:(\w+)/g, '([^/]+)');
     return new RegExp(`^${regexPath}$`);
   }
 
   extractParamNames(path) {
-    const matches = path.match(/:(w+)/g);
+    const matches = path.match(/:(\w+)/g);
     return matches ? matches.map(m => m.slice(1)) : [];
   }
 

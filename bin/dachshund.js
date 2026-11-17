@@ -98,12 +98,17 @@ program
         process.exit(1);
       }
       
+      // Ler o template base uma única vez, antes de qualquer escrita:
+      // a rota '/' sobrescreve dist/index.html, e reler o arquivo depois
+      // faria as tags da home vazarem para as outras páginas.
+      const baseHTML = fs.readFileSync(path.join(distDir, 'index.html'), 'utf8');
+
       // Gerar HTML para cada rota
       const routes = config.routes || {};
       let count = 0;
-      
+
       for (const [routePath, routeConfig] of Object.entries(routes)) {
-        await generateRouteHTML(routePath, routeConfig, distDir);
+        await generateRouteHTML(routePath, routeConfig, distDir, baseHTML);
         count++;
       }
       
@@ -115,15 +120,11 @@ program
     }
   });
 
-async function generateRouteHTML(routePath, routeConfig, distDir) {
+async function generateRouteHTML(routePath, routeConfig, distDir, baseHTML) {
   const seo = routeConfig.seo || {};
-  
-  // Ler template base
-  const baseHTMLPath = path.join(distDir, 'index.html');
-  let html = fs.readFileSync(baseHTMLPath, 'utf8');
-  
-  // Injetar SEO
-  html = injectSEOTags(html, seo);
+
+  // Injetar SEO no template base original
+  const html = injectSEOTags(baseHTML, seo);
   
   // Determinar caminho do arquivo
   let outputPath;

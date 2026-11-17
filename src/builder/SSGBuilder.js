@@ -13,22 +13,24 @@ class SSGBuilder {
   async build(routes) {
     console.log('🐕 Dachshund: Generating static HTML with SEO...');
 
+    // Ler o template base uma única vez, antes de qualquer escrita:
+    // a rota '/' sobrescreve dist/index.html, e reler o arquivo depois
+    // faria as tags da home vazarem para as outras páginas.
+    const baseHTML = await fs.readFile(
+      path.join(this.config.distDir, 'index.html'),
+      'utf8'
+    );
+
     for (const [routePath, routeData] of Object.entries(routes)) {
-      await this.generateHTML(routePath, routeData);
+      await this.generateHTML(routePath, routeData, baseHTML);
     }
 
     console.log('✅ Static generation complete!');
   }
 
-  async generateHTML(routePath, routeData) {
+  async generateHTML(routePath, routeData, baseHTML) {
     const { seo } = routeData;
     const htmlPath = this.getHTMLPath(routePath);
-    
-    // Ler template base
-    const baseHTML = await fs.readFile(
-      path.join(this.config.distDir, 'index.html'),
-      'utf8'
-    );
 
     // Injetar meta tags
     const htmlWithSEO = this.injectSEO(baseHTML, seo);
